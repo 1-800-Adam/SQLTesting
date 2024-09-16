@@ -1,1 +1,0 @@
-Purpose of this module is to work with SQL and test out the logging module of python

@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update requirements.txt",
+            "type": "shell",
+            "command": "pip freeze > requirements.txt",
+            "problemMatcher": [],
+            "detail": "Regenerates the requirements.txt file with the current Python environment packages."
+        }
+    ]
+}

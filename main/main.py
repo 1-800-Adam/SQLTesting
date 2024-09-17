@@ -69,9 +69,9 @@ def dialogue(db_conn, close_conn=True):
             break
         else:
             sql_tokens = manual_tokenize_sql(userinput)
-            logger.info("SQL TOKENS: ", sql_tokens)
+            logger.info("SQL TOKENS: " + str(sql_tokens))
             sql_statement = reconstruct_statement(sql_tokens)
-            logger.info("SQL STATEMENT is: ", sql_statement)
+            logger.info("SQL STATEMENT is: " + str(sql_statement))
             try:
                 df = pd.read_sql_query(sql_statement, db_conn)
                 print(df)

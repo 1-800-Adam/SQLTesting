@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Simple project to test out SQLite3 Python library while touching up on SQL knowledge. 
+Simple project to test out SQLite3 Python library while touching up on SQL knowledge.
 
 Resources used:
 - [ Intuitive SQL For Data Analytics - Tutorial ](https://youtu.be/mXW7JHJM34k?si=-RTfxRKgrD3QbR6y)
@@ -65,4 +65,4 @@ Resources used:
 Provide contact information for users who have questions or feedback about the project.
 
 - **Author:** Adam B
-- **GitHub:** [Your GitHub Profile](https://github.com/ElectricBanana)
+- **GitHub:** [ElectricBanana](https://github.com/ElectricBanana)

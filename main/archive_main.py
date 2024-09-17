@@ -43,12 +43,12 @@ def app_handler():
     def greet():
         label.config(text=f"Hello, {entry.get()}!")
 
-    root = tk.Tk()
+    root = tk.Tk() #root is the main app
     root.title("SQL App")
 
-    tk.Label(root, text="Enter your name:").pack(pady=5)
-    entry = tk.Entry(root)
-    entry.pack(pady=5)
+    tk.Label(root, text="Enter your name:").pack(pady=5) #label
+    entry = tk.Entry(root) #entry on the root application
+    entry.pack(pady=5) #packs the gui for positioning
     tk.Button(root, text="Greet", command=greet).pack(pady=5)
     label = tk.Label(root, text="")
     label.pack(pady=5)
@@ -67,13 +67,13 @@ def main():
 
 
 
-
-
     ### Testing Sandbox ###
     db_close(my_db)
 
 logger = logging_setup()
 logger.info('___Program Started___')
+app_handler()
+exit()
 main()
 logger.info('___Program Finished___')
 

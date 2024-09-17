@@ -2,7 +2,7 @@
 
 **[Testing program using Python and SQL to relearn SQL concepts]**
 
-![License](...) ![Build Status](https://img.shields.io/badge/status-testing-brightgreen)
+![Build Status](https://img.shields.io/badge/status-testing-brightgreen)
 
 ## Table of Contents
 

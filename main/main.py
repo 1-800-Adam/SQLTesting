@@ -4,6 +4,7 @@ These scripts are for testing out SQL Functions in python: https://www.geeksforg
 import sqlite3
 import logging
 import pandas as pd
+import tkinter as tk
 
 def logging_setup():
     my_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -38,6 +39,24 @@ def close():
         logger.removeHandler(handler)
     logger.info('closed')
 
+def app_handler():
+    def greet():
+        label.config(text=f"Hello, {entry.get()}!")
+
+    root = tk.Tk()
+    root.title("SQL App")
+
+    tk.Label(root, text="Enter your name:").pack(pady=5)
+    entry = tk.Entry(root)
+    entry.pack(pady=5)
+    tk.Button(root, text="Greet", command=greet).pack(pady=5)
+    label = tk.Label(root, text="")
+    label.pack(pady=5)
+
+    root.mainloop()
+    
+    pass
+
 def main():
     my_db,my_cur = db_conn("fantasy.db")
 
@@ -47,8 +66,7 @@ def main():
     print(df)
 
 
-    # my_cur.execute(sql_query)
-    # results = my_cur.fetchall()
+
 
 
     ### Testing Sandbox ###

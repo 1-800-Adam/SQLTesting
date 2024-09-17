@@ -3,6 +3,7 @@ These scripts are for testing out SQL Functions in python: https://www.geeksforg
 """
 import sqlite3
 import logging
+import pandas as pd
 
 def logging_setup():
     my_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -38,16 +39,16 @@ def close():
     logger.info('closed')
 
 def main():
-    #my_db,my_cur = db_conn("Test.db") #connects to db
-    my_db,my_cur = db_conn("test.db")
+    my_db,my_cur = db_conn("fantasy.db")
 
     ### Testing Sandbox ###
-    sql_query = "SELECT * FROM automation_data_by_state.csv"
-    my_cur.execute(sql_query)
-    print(my_cur.fetchall)
+    sql_query = "SELECT * FROM characters;"
+    df = pd.read_sql_query(sql_query, my_db)
+    print(df)
 
 
-
+    # my_cur.execute(sql_query)
+    # results = my_cur.fetchall()
 
 
     ### Testing Sandbox ###
